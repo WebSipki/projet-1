@@ -1,0 +1,23 @@
+:root {
+  --primary-color: #000000;
+--secondary-color: #f8f9fa;
+  --text-color: #333;
+  --font-main: 'Roboto', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+}
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+section {
+  padding: 60px 20px;
+}

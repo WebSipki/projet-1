@@ -1,0 +1,99 @@
+/* Header général */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+ /* background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;*/
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+  width: 250px;
+  height: auto;
+ 
+}
+
+/* Navigation Desktop */
+.nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-size: 20px;
+}
+
+.nav a:hover {
+  color: #ff9800;
+}
+
+/* Lien actif */
+.active-link {
+  color: #ff9800;
+  border-bottom: 2px solid #ff9800;
+  padding-bottom: 3px;
+}
+
+/* Burger Menu (hidden on desktop) */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  transition: all 0.3s;
+}
+
+/* Animation burger */
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 200px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -2px 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .nav.show {
+    transform: translateX(0);
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+}

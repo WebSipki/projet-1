@@ -1,0 +1,144 @@
+/* ===== Section À propos ===== */
+.about {
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+/* Container principal */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* Quand visible */
+.about-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image à gauche */
+.about-img {
+  flex: 1;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.8s ease-out;
+}
+
+/* Texte à droite */
+.about-text {
+  flex: 1;
+}
+
+.about-text h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff9800;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Features */
+.about-features {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.feature.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Bouton */
+.btn {
+  background: #ff9800;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e68900;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .about-container {
+    gap: 30px;
+  }
+
+  .about-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .about-text h3,
+  .about-text p,
+  .about-features {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .feature {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+  }
+}
